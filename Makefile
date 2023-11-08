@@ -332,7 +332,7 @@ darwin-arm64 += darwin_arm64.tar.gz
 darwin-arm64:
 	@ echo $(darwin-arm64)
 
-include_packages := $(mips) $(mipsel) $(arm64) $(amd64) $(armel) $(armhf) $(riscv64) $(s390x) $(ppc64le) $(i386) $(windows) $(darwin-amd64) $(darwin-arm64)
+include_packages := $(arm64) $(amd64)
 
 .PHONY: package
 package: docs config $(include_packages)
