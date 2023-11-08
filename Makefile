@@ -137,7 +137,7 @@ telegraf: build
 # Used by dockerfile builds
 .PHONY: go-install
 go-install:
-	go install -mod=mod -ldflags "-w -s $(LDFLAGS)" ./cmd/telegraf
+	go install -mod=mod -ldflags "-w -s $(LDFLAGS)" ./cmd/ilogtail_telegraf
 
 .PHONY: test
 test:
@@ -274,7 +274,7 @@ install: $(buildbin)
 $(buildbin):
 	echo $(GOOS)
 	@mkdir -pv $(dir $@)
-	CGO_ENABLED=0 go build -o $(dir $@) -tags "$(BUILDTAGS)" -ldflags "$(LDFLAGS)" ./cmd/telegraf
+	CGO_ENABLED=0 go build -o $(dir $@) -tags "$(BUILDTAGS)" -ldflags "$(LDFLAGS)" ./cmd/ilogtail_telegraf
 
 # Define packages Telegraf supports, organized by architecture with a rule to echo the list to limit include_packages
 # e.g. make package include_packages="$(make amd64)"
