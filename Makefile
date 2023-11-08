@@ -286,11 +286,11 @@ mipsel += mipsel.deb linux_mipsel.tar.gz
 .PHONY: mipsel
 mipsel:
 	@ echo $(mipsel)
-arm64 += linux_arm64.tar.gz arm64.deb aarch64.rpm
+arm64 += linux_arm64.tar.gz
 .PHONY: arm64
 arm64:
 	@ echo $(arm64)
-amd64 += freebsd_amd64.tar.gz linux_amd64.tar.gz amd64.deb x86_64.rpm
+amd64 += freebsd_amd64.tar.gz linux_amd64.tar.gz
 .PHONY: amd64
 amd64:
 	@ echo $(amd64)
